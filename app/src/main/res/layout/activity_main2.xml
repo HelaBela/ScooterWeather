@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.helenafranczak.scooterweather.Main2Activity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:src="@drawable/ic_motorcycle_black_48dp"
+            android:layout_above="@+id/dots"
+            android:layout_centerInParent="true"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WEATHER"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/dots"
+            style="@style/CategoryStyle3"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:id="@+id/dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <TextView
+
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/magnitude_circle"/>
+            <TextView
+
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/magnitude_circle1"/>
+            <TextView
+
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/magnitude_circle2"/>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/cityName"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/tan_background"
+            android:hint="Type your city here..."
+            android:textAlignment="center"
+            style="@style/CategoryStyle4"
+            tools:ignore="HardcodedText,NestedWeights" />
+
+        <Button
+            android:id="@+id/button"
+            style="@style/CategoryStyle4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="findWeatehr"
+            android:text="Find weather"
+            android:textAlignment="center"
+            tools:ignore="HardcodedText" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

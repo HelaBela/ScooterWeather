@@ -6,42 +6,79 @@
     android:baselineAligned="false"
     android:orientation="vertical">
 
-    <RelativeLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:gravity="fill"
         android:background="@color/category_colors"
         >
 
-
-    <ImageView
-        android:id="@+id/weatherImg"
-      android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_grain_white_48dp"
-        android:layout_margin="25dp"
-        tools:ignore="ContentDescription" />
-
-    <ImageView
-        android:id="@+id/bikeImg"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/ic_motorcycle_white_48dp"
-        tools:ignore="ContentDescription" />
-
-        <TextView
-            android:id="@+id/todo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="Enjoy"
-            style="@style/CategoryStyle"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
-            tools:ignore="RtlHardcoded" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
 
-    </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/cityName"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:layout_gravity="fill"
+                android:padding="1dp"
+                android:layout_marginStart="5dp"
+                tools:text="Sydney"
+                style="@style/CategoryStyle"
+                android:layout_marginLeft="0dp"
+                tools:ignore="ContentDescription"/>
+
+            <ImageView
+                android:id="@+id/bikeImg"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="fill"
+                android:src="@drawable/ic_motorcycle_white_48dp"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+             <ImageView
+                android:id="@+id/weatherImg"
+              android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="fill"
+                android:src="@drawable/ic_grain_white_48dp"
+                android:padding="5dp"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/warning"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.3"
+                android:layout_gravity="fill"
+                android:padding="1dp"
+                tools:text="Watch out"
+                style="@style/CategoryStyle"
+                android:layout_marginLeft="0dp"
+                tools:ignore="ContentDescription"/>
+
+    </LinearLayout>
+
+</LinearLayout>
 
     <LinearLayout
         android:id="@+id/forecast"
@@ -52,6 +89,11 @@
         android:gravity="fill"
         android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="vertical">
 
         <TextView
             android:id="@+id/temp"
@@ -73,6 +115,7 @@
             android:gravity="center"
             tools:text="" />
 
+
         <TextView
             android:id="@+id/condition"
             style="@style/CategoryStyle"
@@ -82,37 +125,53 @@
             android:gravity="center"
             tools:text="" />
 
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".3"
+            android:layout_marginLeft="250dp"
+            android:src="@drawable/white_retina"
+            />
 
     </LinearLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:background="@color/category_family"
         android:gravity="fill"
-        android:background="@color/category_family">
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="Today's quote"
-            style="@style/CategoryStyle2"
 
-            />
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0.1"-->
+            <!--android:text="Food fot thought"-->
+            <!--android:gravity="left"-->
+            <!--style="@style/CategoryStyle2"-->
+
+            <!--/>-->
+
 
         <TextView
             android:id="@+id/quote"
+            android:inputType="textMultiLine"
             style="@style/CategoryStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="fill"
             android:gravity="center"
+            android:padding="1dp"
             tools:text="Safety is a cheap and effective insurance policy."
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            />
 
 
-    </RelativeLayout>
+
+    </LinearLayout>
 
 
 </LinearLayout>

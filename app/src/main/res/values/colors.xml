@@ -5,6 +5,7 @@
     <color name="colorAccent">#FF4081</color>
 
 
+
     <!-- Primary color of the app (shown in the app bar) -->
     <color name="primary_color">#4A312A</color>
 
@@ -25,6 +26,20 @@
 
     <!-- Background color for the phrases category -->
     <color name="category_phrases">#1565C0</color>
+
+
+
+
+
+
+    <!-- Magnitude circle color for an earthquake with magnitude between 2 and 3 -->
+    <color name="magnitude2">#04B4B3</color>
+
+    <!-- Magnitude circle color for an earthquake with magnitude between 4 and 5 -->
+    <color name="magnitude4">#F5A623</color>
+
+    <!-- Magnitude circle color for an earthquake with magnitude over 10 -->
+    <color name="magnitude10plus">#C03823</color>
 
 
 
